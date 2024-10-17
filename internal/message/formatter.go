@@ -39,16 +39,16 @@ func (m *formatter) HandleMessage(status uint32, email string) {
 }
 
 func (m *formatter) sendAccountCreatedEmail(status uint32, email string) {
-	emailContent := fmt.Sprintf("Your account has been successfully created.\n\nBest regards,\nSupport Team.")
+	emailContent := "Your account has been successfully created.\n\nBest regards,\nSupport Team."
 	m.sender.SendEmail(status, email, emailContent)
 }
 
 func (m *formatter) sendAccountUpdatedEmail(status uint32, email string) {
-	emailContent := fmt.Sprintf("Your account has been successfully updated.\n\nBest regards,\nSupport Team.")
+	emailContent := "Your account has been successfully updated.\n\nBest regards,\nSupport Team."
 	m.sender.SendEmail(status, email, emailContent)
 }
 
 func (m *formatter) sendAccountVerifiedEmail(status uint32, email string) {
-	emailContent := fmt.Sprintf("Your account has been successfully verified.\n\nBest regards,\nSupport Team.")
+	emailContent := "Your account has been successfully verified.\n\nBest regards,\nSupport Team."
 	m.sender.SendEmail(status, email, emailContent)
 }
